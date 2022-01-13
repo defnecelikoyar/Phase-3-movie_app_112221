@@ -3,8 +3,8 @@
 # Run the APP
 1. cd into movies_app
 2. In the terminal, run `bundle install`
-2. In the terminal, run  `ruby ./bin/run.rb` to start the CLI
-3. If the following error message is returned: zsh: permission denied: ./bin/run.rb, run the following command: `chmod +x ruby ./bin/run.rb`
+3. In the terminal, run  `ruby ./bin/run.rb` to start the CLI
+4. If the following error message is returned: zsh: permission denied: ./bin/run.rb, run the following command: `chmod +x ruby ./bin/run.rb`
 
 
 # Deliverables 

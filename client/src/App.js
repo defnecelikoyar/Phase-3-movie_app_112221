@@ -9,6 +9,17 @@ function App() {
     .then(setTickets)
   },[])
 
+  function handleDelete(ticket) {
+    fetch(`http://localhost:9292/tickets/${ticket.id}`,{
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then(console.log(ticket))
+  }
+
   return (
     <div className="App">
       {tickets.map(t => {
@@ -17,7 +28,7 @@ function App() {
           <h1>{t.name}</h1>
           <p>{t.price}</p>
           <p>{t.movie.title}</p>
-          <button>Delete Ticket</button>
+          <button onClick={() => handleDelete(t)}>Delete Ticket</button>
           </div>
         )
       })}
